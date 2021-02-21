@@ -1,4 +1,4 @@
-baseURL: http://example.com/
+baseURL: https://example.com/
 languageCode: "en-us"
 title: "Kathier Exclusive - Home of Contenental Dishes and Styles"
 theme: "resto-hugo"
@@ -17,6 +17,3 @@ params:
   twitter: "https://twitter.com"
   instagram: "https://instagram.com"
   github: 'https://github.com/mathieuhendey'
-
-site:
-  title: 'Chel Codes'
