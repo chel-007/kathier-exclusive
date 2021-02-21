@@ -1,40 +1,28 @@
-name: Build and Deploy
-on:
-  push:
-    branches:
-      - main
-
+name: CI
+on: push
 jobs:
-  build:
-    name: Build
-    runs-on: ubuntu-20.04
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@main
-      - name: Install Dependencies
-        run: npm install
-      - name: Build
-        run: npm hugo
-      - name: Archive Production Artifact
-        uses: actions/upload-artifact@main
-        with:
-          name: dist
-          path: dist
   deploy:
-    name: Deploy
-    needs: build
     runs-on: ubuntu-20.04
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@main
-      - name: Download Artifact
-        uses: actions/download-artifact@main
+      - name: Git checkout
+        uses: actions/checkout@v2
+
+      - name: Setup hugo
+        uses: peaceiris/actions-hugo@v2
         with:
-          name: dist
-          path: dist
+          hugo-version: "0.80.0"
+
+      - name: Build
+        # remove --minify tag if you do not need it
+        # docs: https://gohugo.io/hugo-pipes/minification/
+        run: hugo
+
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@main
         with:
           args: deploy --only hosting
+          publish_dir: ./public
+          publish_branch: main
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        #   cname: example.com
