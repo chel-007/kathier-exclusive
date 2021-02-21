@@ -14,7 +14,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Build
-        run: hugo
+        run: npm hugo
       - name: Archive Production Artifact
         uses: actions/upload-artifact@main
         with:
