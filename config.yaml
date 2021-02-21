@@ -1,19 +1,22 @@
-baseURL: https://kathier-exclusive.web.app/
+baseURL: http://example.com/
 languageCode: "en-us"
-title: "Resto Hugo - Port of resto theme for hugo"
+title: "Kathier Exclusive - Home of Contenental Dishes and Styles"
 theme: "resto-hugo"
-copyright: "&copy 2019 Resto Hugo" # HTML tags supported
+copyright: "&copy 2021 Kathier Exclusive" # HTML tags supported
 googleAnalytics: "UA-123-45"
 disqusShortname: "yourdiscussshortname"
 
 # Theme specific configuration
 params:
-  logo: "img/logo.png"
+  logo: "img/logo2.png"
   enableDisqus: true # enable / disable comments for blog posts
   enableGA:  true # enable / disable google analytics
   heroText: "We Love <br> Delicious Foods !"
-  footerText: "This area supports HTML code. Text can be edited with <code>footerText</code> value in config.toml"
+  footerText: "We believe that style and class can take you anywhere. Read our <code>Blog</code> or have a look at our <code>Menu</code>. One thing is constant - You would find something you like"
   facebook: "https://facebook.com"
   twitter: "https://twitter.com"
   instagram: "https://instagram.com"
   github: 'https://github.com/mathieuhendey'
+
+site:
+  title: 'Chel Codes'
