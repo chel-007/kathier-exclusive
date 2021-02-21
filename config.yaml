@@ -1,4 +1,4 @@
-baseURL: "https://kathier-exclusive.web.app/"
+baseURL: https://kathier-exclusive.web.app/
 languageCode: "en-us"
 title: "Resto Hugo - Port of resto theme for hugo"
 theme: "resto-hugo"
@@ -16,3 +16,4 @@ params:
   facebook: "https://facebook.com"
   twitter: "https://twitter.com"
   instagram: "https://instagram.com"
+  github: 'https://github.com/mathieuhendey'
